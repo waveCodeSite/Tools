@@ -1353,7 +1353,7 @@ function checkSys() {
 		# Try to remove comments of any valid mirror.
 		sed -i 's/#//' /etc/apk/repositories
 		# Add community mirror.
-		[[ ! $(grep -i "community" /etc/apk/repositories) ]] && sed -i '$a\http://ftp.udx.icscoe.jp/Linux/alpine/v'${CurrentAlpineVer}'/community' /etc/apk/repositories
+		[[ ! $(grep -i "community" /etc/apk/repositories) ]] && sed -i '$a\https://mirrors.ustc.edu.cn/alpine/v'${CurrentAlpineVer}'/community' /etc/apk/repositories
 		# Add testing mirror.
 		# [[ ! `grep -i "testing" /etc/apk/repositories` ]] && sed -i '$a\http://ftp.udx.icscoe.jp/Linux/alpine/edge/testing' /etc/apk/repositories
 		# Alpine Linux use "apk" as package management.
